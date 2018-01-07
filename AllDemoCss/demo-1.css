@@ -2,4 +2,10 @@
 div{
     border: 1px solid grey;
     padding: 5px;
+    width:600px;
+    margin: 0 auto;
+}
+div:nth-child(2){
+    border-right: 3px solid red;
+    background:rgba(255, 0,0, 0.3);
 }
