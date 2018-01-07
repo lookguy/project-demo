@@ -1,12 +1,13 @@
 @charset "utf-8";
 div{
-    border: 1px solid grey;
     padding:0 20px;
     width:600px;
     margin: 0 auto;
     margin-top: 30px;
 }
 div:nth-child(2){
+    width: 598px;
+    border: 1px solid grey;
     border-radius: 3px;
 }
 div:nth-child(2){
@@ -16,13 +17,11 @@ div:nth-child(2){
     background:rgba(233, 122, 122, 1);
 }
 div:nth-child(3){
-    width: 590px;
     border-bottom: 5px solid rgb(190, 161, 32);
     border-top: 5px solid rgb(190, 161, 32);
     background:rgb(232, 233, 202);
 }
 div:nth-child(4){
-    width: 590px;
     border-bottom: 5px solid rgb(32, 190, 66);
-    background:rgba(233, 122, 122, 1);
+    background: rgb(105, 218, 129);
 }
