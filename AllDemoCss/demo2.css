@@ -1,0 +1,10 @@
+@charset "utf-8";
+div{
+    text-align: center;
+}
+span{
+    padding: 20px;
+    font:24px/1.5 Arial,"微软雅黑";
+    font-weight: bold;
+    border-radius: 5px;
+}
