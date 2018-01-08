@@ -60,3 +60,43 @@ span:nth-child(5){
     background: rgb(99, 184, 99);
     color: aliceblue;
 }
+/* 最后一题，哇哈哈 */
+#demo4 .box{
+    margin:0 auto;
+    margin-bottom: 20px;
+    width: 0;
+    border-top: 20px solid blue;
+    border-right: 20px solid yellow;
+    border-left: 20px solid green;
+    border-bottom: 20px solid red;
+}
+#demo4 .box2{
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+#demo4 .box3{
+    border-top: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+#demo4 .box4{
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+}
+#demo4 .box5{
+    border-top: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+#demo4 .box6{
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid green;
+}
+#demo4 .box7{
+    border-top: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid red;
+}
