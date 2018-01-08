@@ -2,16 +2,21 @@
 #demo2{
     text-align: center;
     margin-top: 50px;
+    
 }
 #demo2>span{
     padding: 20px;
     font:24px/1.5 Arial,"微软雅黑";
     font-weight: bold;
     border-radius: 5px;
+    margin:0 10px;
+}
+#demo2>span:hover{
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.623);
 }
 span:first-child{
     color: white;
-    background: blue;
+    background: rgb(0, 255, 242);
 }
 span:nth-child(2){
     background: yellow;
