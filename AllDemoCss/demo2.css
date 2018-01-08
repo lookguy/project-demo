@@ -33,3 +33,8 @@ span:nth-child(5){
     color: white;
     background: green;
 }
+/* 来写第三个demo */
+#demo3{
+    width: 600px;
+    margin: 0 auto;
+}
