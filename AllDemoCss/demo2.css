@@ -1,13 +1,13 @@
 @charset "utf-8";
 #demo2{
     text-align: center;
+    margin-top: 50px;
 }
 #demo2>span{
     padding: 20px;
     font:24px/1.5 Arial,"微软雅黑";
     font-weight: bold;
     border-radius: 5px;
-    margin-top: 50px;
 }
 span:first-child{
     color: white;
