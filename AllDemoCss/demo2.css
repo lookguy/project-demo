@@ -35,6 +35,28 @@ span:nth-child(5){
 }
 /* 来写第三个demo */
 #demo3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#demo3 table{
+    margin: 0 auto; 
+    margin-top: 50px;
     width: 600px;
-    margin: 0 auto;
+    border-spacing: 0;
+    text-align: left;
+    text-transform: capitalize;
+}
+#demo3 td,#demo3 th{
+    padding: 8px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+#demo3 table tr:nth-child(2n){
+    background: rgb(219, 219, 219);
+}
+#demo3 table:first-child{
+    border: 1px solid rgb(221, 221, 221);
+    border-bottom: none;
+}
+#demo3 table:first-child tr:first-child{
+    background: rgb(99, 184, 99);
+    color: aliceblue;
 }
