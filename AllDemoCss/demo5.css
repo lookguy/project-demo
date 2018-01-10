@@ -1,0 +1,33 @@
+body{
+    background:#f3c1af;
+  }
+  .container{
+    width:400px;
+    margin:0 auto;
+    text-align: center;
+    color:#6a6a6a;
+  }
+  .container a{
+    font-size:14px;
+    text-decoration: none;
+    color:#fff;
+  }
+  .container>a{
+    background:#7db383;
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:3px;
+    margin:20px 0;
+  }
+  .container>a:hover{
+    background:#a1e5a9;
+  }
+  .container h1{
+    font-size:42px;
+  }
+  .container p{
+    color:#999;
+  }
+  .container p>a{
+    color:#7db383;
+  }
