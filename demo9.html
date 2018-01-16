@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo9</title>
+    <style>
+
+        .contianer{
+            width: 600px;
+            margin: 0 auto;
+        }
+        .contianer .box{
+            width: 600px;
+            box-sizing: content-box;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            border: 1px solid transparent;
+            margin: 40px 0;/*BFC??*/
+            padding: 0 20px;
+            position: relative;
+        }
+        .box>h1,.box>p{
+            margin: 20px 0;
+        }
+        .box1{background:rgb(196, 37, 37);}
+        .box2{background:rgb(196, 172, 37);}
+        .box3{background:rgb(50, 196, 37);}
+        .box4{background:rgb(37, 119, 196);}
+        .contianer .icon{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font: 24px/1 Arial;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div class="box1 box">
+            <h1>恭喜你</h1>
+            <span class="icon">×</span>
+            <p>获得本周学霸，继续加油吧</p>
+        </div>
+        <div class="box2 box">
+            <h1>警告</h1>
+            <span class="icon">×</span>
+            <p>学如逆水行舟，不进则退</p>
+        </div>
+        <div class="box3 box">
+            <h1>通知</h1>
+            <span class="icon">×</span>
+            <p>晚上上课，不要忘了</p>
+        </div>
+        <div class="box4 box">
+            <h1>天啊</h1>
+            <span class="icon">×</span>
+            <p>竟然几天没做任务</p>
+        </div>
+    </div>
+</body>
+</html>
