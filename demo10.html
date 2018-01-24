@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BFC作用</title>
+    <style>
+        .box{
+            width: 100px;
+            background: pink;
+        }
+        .item{
+            width: 50px;
+            background: red
+            ;
+        }
+        .box2 .item{
+            float: left;
+        }
+        .box3{
+            overflow: auto;
+        }
+        .box3 .item{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>这是初始的</h1>
+    <p>父元素是粉色，里面只有一个红色块级元素，加了宽度，内容由字体撑开</p>
+    <div class="box">
+        <div class="item">lio</div>
+    </div>
+    <h1>这红块是设置了浮动的</h1>
+    <p>粉色不见了，因为浮动的原因造成父元素高度坍塌</p>
+    <div class="box box2">
+        <div class="item">lio</div>
+    </div>
+    
+    <br>
+    <h1>这红块是设置了浮动，父元素加overflow:auto的</h1>
+    <p>形成BFC，计算BFC的高度时，浮动元素也参与计算。</p>
+    <div class="box box3">
+        <div class="item">lio</div>
+    </div>
+    
+</body>
+</html>

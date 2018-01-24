@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid布局</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            display: grid;
+            grid-template-rows: 50px 50px auto 50px;
+            grid-template-columns: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>GRID布局</h1>
+    <p>一开始你需要使用display：grid把容器元素定义为一个网格，使用grid-template-columns和grid-template-rows设置列和行大小，然后使用grid-column 和 grid-row把它的子元素放入网格。 与flexbox类似，网格子元素的原始顺序不重要。 你的可以在 CSS 里以任意顺序放置它们，这使得使用媒体查询重新排列网格变得非常容易。 想象一下，我们需要定义整个页面的布局，然后为了适应不同的屏幕宽度完全重新排列，我们只需要几行CSS就能实现这个需求。 网格是有史以来最强大的CSS模块之一。</p>
+    <div class="container">
+        <div class="box1"></div>
+    </div>
+</body>
+</html>
