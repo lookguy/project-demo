@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BFC作用</title>
     <style>
+        body{
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        div{
+            margin: 0 auto;
+        }
         h1{
             color: rgb(0, 0, 0);
         }
@@ -61,13 +69,14 @@
     <div class="box box2">
         <div class="item">lio</div>
     </div>
-    
+
     <br>
     <h2>这红块是设置了浮动，父元素加overflow:auto的</h2>
     <p>形成BFC，计算BFC的高度时，浮动元素也参与计算。</p>
     <div class="box box3">
         <div class="item">lio</div>
     </div>
+
     <h1>解决父子margin合并问题</h1>
     <p>两个没有margin的小绿块和父元素</p>
     <div class="container">
