@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <title>简书练习</title>
     <link rel="stylesheet" href="AllDemoCss/demo-jianshu.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_563468_qfnfahumijksm7vi.css">
 </head>
 <body>
-    <header>
+    <header class="clearfix">
         <a class="logo" href="#"><img src="https://cdn2.jianshu.io/assets/web/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" alt="简书"></a>
-        <ul class="navbar clearfix">
-            <li><a href="#"><span class="iconfont icon-zhinanzhen"></span> 发现</a></li>
-            <li><a href="#"><span class="iconfont icon-book"></span> 关注</a></li>
-            <li class="news">
-                <a href="#"><span class="iconfont icon-xiaoxi"></span> 消息</a>
-                <ul class="messages">
-                    <li><a href="#"><span class="iconfont icon-pinglun"></span>评论</a></li>
-                    <li><a href="#"><span class="iconfont icon-xinxi"></span>简信</a></li>
-                    <li><a href="#"><span class="iconfont icon-upload"></span>投稿请求</a></li>
-                    <li><a href="#"><span class="iconfont icon-like"></span>喜欢和赞</a></li>
-                    <li><a href="#"><span class="iconfont icon-followed"></span>关注</a></li>
-                    <li><a href="#"><span class="iconfont icon-pay"></span>赞赏和付费</a></li>
-                    <li><a href="#"><span class="iconfont icon-qita"></span>其他提醒</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="search">
-            <input type="text" placeholder="搜索">
-            <span class="iconfont icon-search"></span>
-            <div class="pannel">
-                <h3>热门搜索</h3>
-                <a class="refresh" href="#"><span class="iconfont icon-shuaxin"></span>换一批</a>
-                <div class="lables">
-                    <a href="#" class="lable">区块链</a>
-                    <a href="#" class="lable">旅行青蛙</a>
-                    <a href="#" class="lable">手账</a>
-                    <a href="#" class="lable">说散就散</a>
-                    <a href="#" class="lable">无问西东</a>
-                </div>
-            </div>
-        </div>
+        <nav class="nav">
+            <ul class="navbar clearfix">
+                <li><a href="#"><span class="iconfont icon-zhinanzhen"></span> 发现</a></li>
+                <li><a href="#"><span class="iconfont icon-book"></span> 关注</a></li>
+                <li class="news">
+                    <a href="#"><span class="iconfont icon-xiaoxi"></span> 消息</a>
+                    <ul class="messages">
+                        <li><a href="#"><span class="iconfont icon-pinglun"></span>评论</a></li>
+                        <li><a href="#"><span class="iconfont icon-xinxi"></span>简信</a></li>
+                        <li><a href="#"><span class="iconfont icon-upload"></span>投稿请求</a></li>
+                        <li><a href="#"><span class="iconfont icon-like"></span>喜欢和赞</a></li>
+                        <li><a href="#"><span class="iconfont icon-followed"></span>关注</a></li>
+                        <li><a href="#"><span class="iconfont icon-pay"></span>赞赏和付费</a></li>
+                        <li><a href="#"><span class="iconfont icon-qita"></span>其他提醒</a></li>
+                    </ul>
+                </li>
+                <li class="search-area">
+                    <div class="search">
+                        <input type="text" placeholder="搜索">
+                        <span class="iconfont icon-search"></span>
+                        <div class="pannel">
+                            <h3>热门搜索</h3>
+                            <a class="refresh" href="#"><span class="iconfont icon-shuaxin"></span>换一批</a>
+                            <div class="lables">
+                                <a href="#" class="lable">区块链</a>
+                                <a href="#" class="lable">旅行青蛙</a>
+                                <a href="#" class="lable">手账</a>
+                                <a href="#" class="lable">说散就散</a>
+                                <a href="#" class="lable">无问西东</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul> 
+        </nav>
         <div class="user-action">
             <a href="#"><span class="iconfont icon-Aa"></span></a>
             <div class="user">
@@ -61,8 +66,37 @@
             <a class="btn-write" href="#"><span class="iconfont icon-weibiaoti1"></span> 写文章</a>
         </div>
     </header>
-    <section>
-        <main class="container"></main>
+    <section class="container">
+        <main>
+            <div class="banner-area">
+                <div class="banner">
+                    <ul class="clearfix">
+                        <li><img src="http://img.hb.aicdn.com/f3bc4faa5b8f9c67ff8f890c7f89756de1ab4c4cd09e1-pX9Yx2_fw658" alt=""></li>
+                        <li><img src="http://img.hb.aicdn.com/f3bc4faa5b8f9c67ff8f890c7f89756de1ab4c4cd09e1-pX9Yx2_fw658" alt=""></li>
+                        <li><img src="http://img.hb.aicdn.com/f3bc4faa5b8f9c67ff8f890c7f89756de1ab4c4cd09e1-pX9Yx2_fw658" alt=""></li>
+                    </ul>
+                </div>
+                <div class="arrow-left change">&leftarrow; </div>
+                <div class="arrow-right">&rightarrow;</div>
+                <div class="dot">
+                    <ul>
+                        <li class="change"><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="hot-title">
+                <li><a href="#"><img src="https://upload.jianshu.io/collections/images/14/6249340_194140034135_2.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" alt="">@IT&CenterDot;互联网</a></li>
+                <li><a href="#"><img src="https://upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" alt="">社会热点</a></li>
+                <li><a href="#"><img src="https://upload.jianshu.io/collections/images/75/22.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" alt="">历史</a></li>
+                <li><a href="#"><img src="https://upload.jianshu.io/collections/images/494271/51164a1egd7b1a4a7c491_690.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" alt="">人文社科</a></li>
+                <li><a href="#"><img src="https://upload.jianshu.io/collections/images/13/%E5%95%8A.png?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" alt="">旅行&CenterDot;在路上</a></li>
+                <li><a href="#"><img src="https://upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" alt="">自然科普</a></li>
+                <li><a href="#"><img src="https://upload.jianshu.io/collections/images/21/20120316041115481.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64" alt="">简书电影</a></li>
+                <li><a href="#">更多热门专题&gt;</a></li>
+            </ul>
+        </main>
         <aside></aside>
     </section>
     <footer></footer>
