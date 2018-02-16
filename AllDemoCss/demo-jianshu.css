@@ -2,12 +2,14 @@
 html,body{
     margin: 0;
     padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 a{
     text-decoration: none;
     color: #666;
 }
-ul{
+ul,
+li{
     margin:0;
     padding: 0;
     list-style: none;
@@ -56,7 +58,7 @@ header .navbar{
 
 header .navbar>li{
     float: left;
-    height: 100%;
+    height: 56px;
 }
 header .navbar>li>a{
     padding: 0 20px;
@@ -214,6 +216,9 @@ header .lables .lable:hover{
 header .user-action>a,
 header .user-action .user{
     display: inline-block;
+}
+.user-action .user-config{
+    line-height: 1;
 }
 header .user-action .user{
     position: relative;
@@ -391,20 +396,25 @@ aside{
     margin-bottom: 30px;
 }
 .hot-title>li{
-    display: inline-block;
+    float: left;
     border: 1px solid #999;
     height: 30px;
+    line-height:30px;
     margin-left: 10px;
     margin-top: 20px;
-    border-radius: 3px;
+    border-radius: 5px;
+    overflow: hidden;
     background: rgb(247, 247, 247);
 }
 .hot-title>li>a{
-    line-height: 30px;
+    display: block;
+    height: 30px;
+    overflow: hidden;
     padding-right: 10px;
 }
+/*图片缝隙解决不了*/
 .hot-title>li img{
-    height: 100%;
-    vertical-align: top;
-    margin-right: 10px;
+    width:32px;
+    vertical-align: middle;
+    height: 32px;
 }
