@@ -95,7 +95,7 @@ header .navbar .messages{
     margin-left: 2px;
     width: 200px;
     padding-top: 2px;
-    box-shadow: 0 1px 3px 3px #f0f0f0;
+    box-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.1);
     position: absolute;
     background: #fff;
     display: none;
@@ -154,7 +154,8 @@ header .pannel{
     line-height: 1;
     padding: 25px;
 }
-header .search input:focus~.pannel{
+header .search input:focus~.pannel,
+.pannel:hover{
     display: block;
     z-index: 2;
 }
@@ -317,6 +318,8 @@ aside{
     position: relative;
     overflow: hidden;
     border-radius: 4px;
+    margin-bottom: 10px;
+    margin-top:30px;
 }
 .banner-area .banner{
     width: 1890px
@@ -391,30 +394,104 @@ aside{
 }
 /*hot-title*/
 .hot-title{
-    margin-left: -10px;
-    margin-top: 30px;
     margin-bottom: 30px;
+    margin-left: -10px;/*a链接里图片缝隙产生的原因*/
 }
-.hot-title>li{
-    float: left;
-    border: 1px solid #999;
-    height: 30px;
-    line-height:30px;
+.hot-title>a{
+    display: inline-block;
+    overflow: hidden;
     margin-left: 10px;
     margin-top: 20px;
-    border-radius: 5px;
-    overflow: hidden;
     background: rgb(247, 247, 247);
-}
-.hot-title>li>a{
-    display: block;
+    border: 1px solid #999;
+    border-radius: 5px;
     height: 30px;
-    overflow: hidden;
-    padding-right: 10px;
 }
-/*图片缝隙解决不了*/
-.hot-title>li img{
-    width:32px;
+.hot-title>a:last-child{
+    border: none;
+    background: none;
+}
+.hot-title span{
+    line-height: 30px;
+    padding: 5px 10px;
+}
+
+.hot-title img{
+    height: 100%;
+    vertical-align: top;
+}
+
+/*articals*/
+.article{
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+    position: relative;
+}
+.article-content{
+    width: 460px;
+}
+.article>img{
+    position: absolute;
+    width: 150px;
+    border-radius: 5px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+/*.article-author*/
+.article-author img{
+    height: 30px;
+    border-radius: 50%;
     vertical-align: middle;
-    height: 32px;
+    margin-right: 5px;
+}
+.article-author .article-username{
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+.article-author .article-releasetime{
+    font-size: 0.75rem;
+    color: #999;
+}
+/*.article-title*/
+.article-title{
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    margin: 10px 0;
+}
+.article-title a{
+    color: #333;
+}
+.article-title a:hover{
+    text-decoration: underline;
+}
+.article-about{
+    font-size: 14px;
+    line-height: 1.5;
+}
+/*article-annotated-information*/
+.article-annotated-information{
+    font-family: "arial";
+    font-size: 0.75rem;
+}
+.article-annotated-information .iconfont{
+    margin-right: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.article-lable{
+    color: rgb(234, 111, 90);
+    padding: 2px 5px;
+    border: 1px solid rgb(234, 111, 90);
+    border-radius: 3px;
+}
+.article-lable:hover{
+    background: rgb(255, 237, 233);
+}
+.article-lable~a{
+    color: #999;
+}
+.article-view:hover,
+.article-message:hover{
+   color: #666; 
 }
