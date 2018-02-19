@@ -294,6 +294,7 @@ header .user-action .btn-write{
     margin-right: auto;
     margin-top: 3px;
     width: 960px;
+    margin-top:30px;
 }
 
 section::after{
@@ -319,7 +320,6 @@ aside{
     overflow: hidden;
     border-radius: 4px;
     margin-bottom: 10px;
-    margin-top:30px;
 }
 .banner-area .banner{
     width: 1890px
@@ -494,4 +494,182 @@ aside{
 .article-view:hover,
 .article-message:hover{
    color: #666; 
+}
+/*articles-more-area*/
+.articles-more-area{
+    border-top: 1px solid #eee;
+    padding: 38px 0;
+}
+.articles-more{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: rgb(165,165,165);
+    padding: 10px 0;
+    border-radius: 25px;
+    color: #fff;
+}
+/*extra-nav*/
+.extra-nav{
+    margin-top: -15px;
+}
+.extra-nav .cards{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.extra-nav-newcharts{
+    background-image: url(https://cdn2.jianshu.io/assets/web/banner-s-1-b8ff9ec59f72ea88ecc8c42956f41f78.png);
+}
+.cards:nth-child(2){
+    background-image: url(https://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png);
+}
+.cards:nth-child(3){
+    background-image: url(https://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png);
+}
+.cards:nth-child(4){
+    background-image: url(https://cdn2.jianshu.io/assets/web/banner-s-5-291e00e9156f30791fe24e3de9c39171.png);
+}
+.cards:nth-child(5){
+    background-image: url(https://cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png);
+}
+/*download*/
+.download{
+    display: block;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid rgb(240, 240, 240);
+    margin-top: 15px;
+    position: relative;
+    padding: 10px 0 10px 20px;
+    cursor: pointer;
+}
+.download img{
+    width: 70px;
+    vertical-align: top;
+}
+.download .download-state{
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.download-state h4{
+    margin: 0;
+    line-height: 1.2;
+}
+.download-state p{
+    line-height: 1.2;
+    font-size: 0.75rem;
+    color: #999;
+}
+.download-action{
+    padding: 15px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 8px 18px 2px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 118%;
+    left: 30px;
+    display: none;
+}
+.download:hover .download-action{
+    display: block;
+}
+.download-action::after{
+    content: " ";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: #fff;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -7.5px;
+    transform: rotate(45deg);
+}
+.download-action img{
+    width: 180px;
+}
+/*recommend-authors*/
+.recommend-authors{
+    margin-top: 15px;
+}
+.recommend-authors-title{
+    color: #999;
+    font-family: "heiti";
+    font-size: 14px;
+    position: relative;
+    padding: 15px 0;
+}
+.recommend-authors-title a{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    color: #999;
+}
+.recommend-authors-lists .author{
+    display: block;
+    padding-left: 60px;
+    position: relative;
+    margin-top: 10px;
+}
+.recommend-authors-lists .recommend-authors-list{
+    position: relative;
+    margin: 20px 0;
+}
+.recommend-authors-lists a img{
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.recommend-authors-declare h5{
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+}
+.recommend-authors-declare p{
+    font-size: 0.75rem;
+    color: #999;
+}
+.recommend-authors-follow{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: rgb(90,195,86);
+    font-size: 14px;
+}
+.recommend-authors-all{
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 7px 0;
+    background: rgb(247, 247, 247);
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    font-size: 13px;
+    color: #666
+}
+
+/*footer*/
+.nav-footer li{
+    display: inline-block;
+    font-size: 13px;
+    color: #666;
+}
+footer p{
+    font-size: 12px;
+    color: #999;
 }
