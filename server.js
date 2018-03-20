@@ -1,2 +1,8 @@
 var http = require('http')
-console.log('helow')
+
+var server = http.createServer(funciton(req,res){
+    res.write("hello world");
+    res.end() 
+})
+
+server.listen(8080)  
