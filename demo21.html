@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .box-active{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>hello</h1>
+        <p>jirengu</p>
+    </div>
+    <button type="submit" id="add">增加</button>
+    <button id="remove">移除</button>
+    <button id="toggle">切换</button>
+</body>
+<script>
+    var box = document.getElementsByClassName("box")[0];
+    var add = document.getElementById("add");
+    var remove = document.getElementById("remove");
+    var toggle = document.getElementById("toggle");
+    (toggle.onclick = function(){
+        box.classList.toggle("box-active");
+    })();
+    (add.onclick = function(){
+        box.classList.add("box-active");
+    })();
+    (remove.onclick = function(){
+        box.classList.remove("box-active");
+    })();
+</script>
+</html>
