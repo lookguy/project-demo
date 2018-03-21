@@ -11,18 +11,56 @@
 
     <header class="userheader">
         <div class="nav-user">
-            <a href="#" class="user-head"></a>
+            <a class="user-head" href="#">模拟用户头像</a>
         </div>
     </header>
     <main class="usermain">
-        <div class="message-box">
-            <ul class="tab-list">
-                <li>注册</li>
-                <li>登陆</li>
+        <div class="message-box active">
+            <ul class="tab-list clearfix">
+                <li id="register-head">注册</li>
+                <li id="login-head">登陆</li>
             </ul>
-            <div class="register">注册信息</div>
-            <div class="longin">登陆信息</div>
+            <div class="register">
+                <form action="#" method="get">
+                    <div><label for="uname">姓名</label><input id="uname" type="text" name="rusername"></div>
+                    <div><label for="user">用户名</label><input id="user" type="text" name="ruser"></div>
+                    <div><label for="rpass">密码</label><input id="rpass" type="password" name="rpassword"></div>
+                    <div><label for="re-rpass">密码确认</label><input id="re-rpass" type="password" name="re-rpassword"></div>
+                </form>
+                <div class="btn-sr"><button type="submit">提交</button><button type="reset">重置</button></div>
+            </div>
+            <div class="login active">
+                <form action="#" method="get">
+                    <div><label for="user">用户名</label><input id="user" type="text" name="ruser"></div>
+                    <div><label for="rpass">密码</label><input id="rpass" type="password" name="rpassword"></div>
+                </form>
+                <div class="btn-sr"><button type="submit">登陆</button><button type="reset">取消</button></div>
+            </div>
         </div>
     </main>
+    <script>
+        var register = document.getElementById("register-head");
+        var login = document.getElementById("login-head");
+        var regpanel = document.querySelector(".register");
+        var logpanel = document.querySelector(".login");
+        var userheader = document.querySelector(".user-head");
+        var box = document.querySelector(".message-box");
+        var usermain = document.querySelector(".usermain");
+        userheader.addEventListener("click",function(e){
+            e.preventDefault;
+            box.classList.remove("active")
+        });
+        usermain.addEventListener("click",function(){
+            box.classList.add("active")
+        })
+        register.addEventListener("click",function(){
+            logpanel.classList.add("active")
+            regpanel.classList.remove("active")
+        });
+        login.addEventListener("click",function(){
+            logpanel.classList.remove("active")
+            regpanel.classList.add("active")
+        });
+    </script>
 </body>
 </html>
