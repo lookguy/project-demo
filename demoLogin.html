@@ -23,12 +23,14 @@
                 <a class="login-head">登陆</a>
                 <i class="fas fa-times diy-pos"></i>
             </div>
-            <form action="#" method="get">
-                <div class="input-area"><label for="uname"><i class="far fa-user-circle"></i></label><input id="uname" type="text" name="rusername"></div>
-                <div class="input-area"><label for="rpass"><i class="fas fa-unlock-alt"></i></label><input id="rpass" type="password" name="rpassword"></div>
-                <div class="input-area"><label for="re-rpass"><i class="fas fa-unlock"></i></label><input id="re-rpass" type="password" name="re-rpassword"></div>
+            <p class="tips"></p>
+            <form action="demo22.html" method="get">
+                <div class="input-area"><label for="uname"><i class="far fa-user-circle"></i></label><input id="uname" type="text" name="rusername" placeholder="输入6到12个数字"></div>
+                <div class="input-area"><label for="rpass"><i class="fas fa-unlock-alt"></i></label><input id="rpass" type="password" name="rpassword" placeholder="输入密码"></div>
+                <div class="input-area"><label for="re-rpass"><i class="fas fa-unlock"></i></label><input id="re-rpass" type="password" name="re-rpassword" placeholder="确认密码"></div>
+                <div class="btn-sr regbtn"><button type="submit">注册</button></div>
             </form>
-            <div class="btn-sr"><button type="submit">注册</button></div>
+            
         </div>
         <div class="login">
             <div class="tab">
@@ -36,30 +38,22 @@
                 <a class="login-head aistrue">登陆</a>
                 <i class="fas fa-times diy-pos"></i>
             </div>
-            <form action="#" method="get">
+            <p class="tipl"></p>
+            <form action="demo22.html" method="get">
                 <div class="input-area"><label for="user"><i class="far fa-user-circle"></i></label><input id="user" type="text" name="ruser" placeholder="用户名"></div>
-                <div class="input-area"><label for="rpass"><i class="fas fa-unlock-alt"></i></label><input id="rpass" type="password" name="rpassword" placeholder="密码"></div>
+                <div class="input-area"><label for="rpass"><i class="fas fa-unlock-alt"></i></label><input id="pass" type="password" name="rpassword" placeholder="密码"></div>
+                <div class="btn-sr logbtn"><button type="submit">登陆</button></div>
             </form>
-            <div class="btn-sr"><button type="submit">登陆</button></div>
+            
         </div>
     </main>
     <script>
-        var usernav = document.querySelector(".user-head");
-        var regpanel = document.querySelector(".register");
-        var logpanel = document.querySelector(".login");
-        var usermain = document.querySelector(".usermain");
-        var donghua = function(d){
-            var enddeg = 180;
-            var startdeg = 0;
-            var step = 2;
-            function deg(){
-                if(startdeg < enddeg){
-                    e.style.deg = getComputedStyle(d).transform + step + "deg";
-                    startdeg += step;
-                    requestAnimationFrame(deg)
-                }
-            }
-        } 
+        var $ = function(na){return document.querySelector(na)};
+        var $$ = function(na){return document.querySelectorAll(na)};
+        var usernav = $(".user-head");
+        var regpanel = $(".register");
+        var logpanel = $(".login");
+        var usermain = $(".usermain"); 
         usernav.addEventListener("click",function(e){
             e.preventDefault;
             usermain.classList.remove("active")
@@ -71,7 +65,6 @@
             e.stopPropagation();   
             var targets = e.target;
             if(targets.className === "register-head"){
-                donghua("register-head");
                 logpanel.classList.add("change")
                 regpanel.classList.remove("change")
             }
@@ -81,11 +74,52 @@
             var targets = e.target;
             if(targets.className === "login-head"){
                 console.log(e)
-                donghua("login-head");
                 logpanel.classList.remove("change")
                 regpanel.classList.add("change")
             }
-        });   
+        });
+        var submitR = $(".regbtn");
+        var submitL = $(".logbtn");
+        var uname = $("#uname");
+        var rpass = $("#rpass");
+        var pass = $("#pass");
+        var rerpass = $("#re-rpass");
+        var user = $("#user");
+        var tip = $(".tips")
+        var tipl = $(".tipl")
+        submitR.addEventListener("click",function(e){
+            var reg = /^\d{6,12}$/g
+            var pass = /^\w{6,14}$/g
+            if(!reg.test(uname.value)){
+                e.preventDefault();
+                var textNode = document.createTextNode("你的用户名填写错误，只能是6到12位数字");
+                tip.textContent = null;
+                tip.append(textNode)
+            }else if(!pass.test(rpass.value)){
+                    e.preventDefault();
+                    var textNode = document.createTextNode("密码可以用6到14位数字，字母，下划线组合");
+                    tip.textContent = null;
+                    tip.append(textNode)
+                }else if(rpass.value !== rerpass.value){
+                        e.preventDefault();
+                        var textNode = document.createTextNode("密码确认错误");
+                        tip.textContent = null;
+                        tip.append(textNode) 
+                    }else{
+                        alert("关闭谈话框后调到任意一个窗口")
+                    }
+        })
+        submitL.addEventListener("click",function(e){
+            
+            if(pass.value.length ===0 || user.value.length === 0){
+                e.preventDefault();
+                var textNode = document.createTextNode("请输入用户名和密码");
+                tipl.textContent = null;
+                tipl.append(textNode) 
+            }else{
+                alert("关闭谈话框后调到任意一个窗口")
+            }
+        })
     </script>
 </body>
 </html>

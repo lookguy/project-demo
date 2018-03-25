@@ -57,21 +57,37 @@ body{
     right: 0;
     top: 0;
 }
+.tips,
+.tipl{
+    font-size: 12px;
+    color: rgb(243, 64, 64);
+    margin: 10px 20px;
+}
 .login,
 .register{
-    color: rgba(0,0,0,0.7);
+    color: #222;
     background: #fff;
     position: absolute;
+    transform-origin: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) rotateY(0);
     padding: 15px;
     box-shadow: 0px 3px 6px 2px rgba(0,0,0,0.2);
-    transform-origin: 50%;
     transition: all 1s;
 }
+.login{
+    transform: translate(-50%,-50%) rotateY(0);
+    animation: 1s cool;
+}
+.register{
+    transform: translate(-50%,-50%) rotateY(0deg);
+    animation: 1s cooled;
+}
 @keyframes cool{
-    from{ transform: rotateY(0)} to {transform: rotateY(180deg)}
+    from{ transform: translate(-50%,-50%) rotateY(180deg);} to {transform: translate(-50%,-50%) rotateY(0);}
+}
+@keyframes cooled{
+    from{ transform: translate(-50%,-50%) rotateY(180deg);} to {transform: translate(-50%,-50%) rotateY(0);}
 }
 .change{
     display: none;
