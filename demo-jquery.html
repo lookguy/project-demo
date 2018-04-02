@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>DEMO</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<style type="text/css">
+		ul,
+		li{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 0;
+		}
+		li{
+			display: inline-block;
+			background: #ddd;
+			font-size: 18px;
+			padding: 5px 18px;
+			border: 1px solid #bbb;
+		}
+		.selected{
+			background: #fff;
+		}
+		.pannel{
+			border: 1px solid #bbb;
+			width: 250px;
+			box-sizing: border-box;
+			padding: 50px 20px;
+		}
+		.pannel p{
+			display: none;
+		}
+		.pannel .active{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li class="selected">2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<div class="pannel">
+		<p>pannel1</p>
+		<p class="active">pannel2</p>
+		<p>pannel3</p>
+		<p>pannel4</p>
+	</div>
+	<script type="text/javascript">
+		$("li").on("click",function(e){
+			$(this).addClass("selected").siblings("li").removeClass("selected")
+			var num = Number(e.target.innerText);
+			$(".pannel p").eq(num-1).addClass("active").siblings("p").removeClass("active")
+		})
+	</script>
+</body>
+</html>
