@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tab-js</title>
+    <style type="text/css">
+		ul,
+		li{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 0;
+		}
+		li{
+			display: inline-block;
+			background: #ddd;
+			font-size: 18px;
+			padding: 5px 18px;
+			border: 1px solid #bbb;
+		}
+		.selected{
+			background: #fff;
+		}
+		.pannel{
+			border: 1px solid #bbb;
+			width: 250px;
+			box-sizing: border-box;
+			padding: 50px 20px;
+		}
+		.pannel p{
+			display: none;
+		}
+		.pannel .active{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+    <ul>
+		<li>1</li>
+		<li class="selected">2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<div class="pannel">
+		<p>pannel1</p>
+		<p class="active">pannel2</p>
+		<p>pannel3</p>
+		<p>pannel4</p>
+    </div>
+    <script>
+        var $ = function(name){
+            return document.querySelector(name)
+        }
+        var $$ = function(name){
+            return document.querySelectorAll(name)
+        }
+        $("ul").addEventListener("click",function(e){
+            var res = e.target;
+            var num = parseInt(res.innerText)-1
+            $$("li").forEach(function(d){
+                d.classList.remove("selected")
+                })
+            res.classList.add("selected")
+            $$(".pannel p").forEach(function(c){
+                c.classList.remove("active")
+            })
+            $$(".pannel p")[num].classList.add("active")
+        })
+    </script>
+</body>
+</html>
