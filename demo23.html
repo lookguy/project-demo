@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery事件动画问答题:2</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        main{
+            width: 700px;
+            margin: 0 auto;
+        }
+        .showp{
+            list-style: none;
+            margin-left: -10px;
+            margin-top: 20px;
+        }
+        .showp::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .showp .item{
+            float: left;
+            border: 1px solid #eee;
+            padding: 10px 20px;
+            margin-left: 10px;
+            position: relative;
+        }
+        .showp .item img{
+            width: 178px;
+        }
+        .btn{
+            border: 1px solid red;
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 3px;
+            color: red;
+            font-size: 12px;
+            margin-top: 20px;
+            margin-right: 50px;
+        }
+        .remove-pannel{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .active{
+            display: none;
+        }
+        .remove-pannel .btn{
+            background: white;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }   
+    </style>
+</head>
+<body>
+    <main>
+        <h1>珠宝首饰</h1>
+        <ul class="showp">
+            <li class="item">
+                <div class="remove-pannel active">
+                    <a href="#" class="btn">删除</a>
+                </div>
+                <a href="#">
+                    <img src="https://picsum.photos/200/200/?image=1" alt="">
+                    <p>和田玉</p>
+                    <p class="price">￥1685</p>
+                </a>
+            </li>
+            <li class="item">
+                <div class="remove-pannel active">
+                    <a href="#" class="btn">删除</a>
+                </div>
+                <a href="#">
+                    <img src="https://picsum.photos/200/200/?image=2" alt="">
+                    <p>和田玉</p>
+                    <p class="price">￥1685</p>
+                </a>
+            </li>
+            <li class="item">
+                <div class="remove-pannel active">
+                    <a href="#" class="btn">删除</a>
+                </div>
+                <a href="#">
+                    <img src="https://picsum.photos/200/200/?image=3" alt="">
+                    <p>和田玉</p>
+                    <p class="price">￥1685</p>
+                </a>
+            </li>
+        </ul>
+        <div><a class="btn add" href="">添加</a><a class="btn remove" href="">编辑</a></div>
+    </main>
+    <script>
+        $(".showp").on("click",".btn",function(e){
+            e.preventDefault();
+            $(this).parents(".item").remove();
+        })
+        $(".add").on("click",function(e){
+            e.preventDefault();
+        for(var i = 0;i < 3; i++){
+            $(".item").eq(0).clone().appendTo(".showp")
+            var final = $(".item img").last();
+            var a = Math.floor(Math.random(0,1)*100)+1
+            var final_src = "https://picsum.photos/200/200/?image=" + a;
+            final.attr("src",final_src);
+            var _price = $(".item").last().find(".price");
+            _price.text("￥"+a+10);
+            }
+
+        })
+        $(".remove").on("click",function(e){
+            e.preventDefault();
+            $(".remove-pannel").toggleClass("active")
+        })
+        
+    </script>
+</body>
+</html>
